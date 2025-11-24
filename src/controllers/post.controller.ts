@@ -83,6 +83,7 @@ export const getMyPost = async (req: AuthRequest, res: Response) => {
     const limit = parseInt(req.query.limit as string) || 10
     const skip = (page - 1) * limit
 
+    // const posts = await Post.find().sort({ createdAt: -1 }).skip(skip).limit(limit)
     const posts = await Post.find({ author: req.user.sub })
       .sort({ createdAt: -1 }) // desc order
       .skip(skip) // ignore data for pagination
