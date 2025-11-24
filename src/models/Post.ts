@@ -10,7 +10,7 @@ export interface IPost extends Document {
   createdAt?: Date
   updatedAt?: Date
 }
-
+// AIzaSyAUIv6Qfw_Tff91gUT57euhGFSIlwCLQ9Y
 const PostSchema = new Schema<IPost>(
   {
     title: { type: String, required: true },
