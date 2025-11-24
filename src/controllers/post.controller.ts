@@ -56,6 +56,7 @@ export const getAllPost = async (req: Request, res: Response) => {
     const limit = parseInt(req.query.limit as string) || 10
     const skip = (page - 1) * limit
 
+    // const posts = await Post.find().sort({ createdAt: -1 }).skip(skip).limit(limit)
     const posts = await Post.find()
       .populate("author", "email") // related model data
       .sort({ createdAt: -1 }) // desc order
