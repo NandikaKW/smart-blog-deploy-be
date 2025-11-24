@@ -1,5 +1,5 @@
 import mongoose, { Document, Schema } from "mongoose"
-
+// Decides the role of the user
 export enum Role {
   ADMIN = "ADMIN",
   AUTHOR = "AUTHOR",
